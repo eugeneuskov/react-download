@@ -82,7 +82,7 @@ final class Download
 
     private function runDownload(string $path)
     {
-        $file = array_pop($this->files);
+        $file = array_shift($this->files);
         $request = $this->initRequest($file, $path);
         $request->end();
     }
