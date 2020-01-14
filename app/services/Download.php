@@ -64,14 +64,14 @@ final class Download
      * @param int $concurrently
      * @return ResponseMiddleware
      */
-    public function download(array $files, string $path, int $concurrently = 5)
+    public function download(array $files, string $path, int $concurrently = 0)
     {
         $this->files = $files;
         $this->total = count($this->files);
         $this->done = 0;
 
         $max = $concurrently ?: count($this->files);
-        while($max --) {
+        while($max--) {
             $this->runDownload($path);
         }
 

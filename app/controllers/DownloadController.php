@@ -41,7 +41,7 @@ final class DownloadController
         $from = $downloadData['from'] ?? null;
         $to = $downloadData['to'] ?? null;
         $path = $downloadData['path'] ?? '/media/eugene/STAR/video/from_react_script/';
-        $concurrently = (int)$downloadData['concurrently'] ?? 5;
+        $concurrently = (int)$downloadData['concurrently'] ?? null;
 
         if (!($url && $format && $from && $to && $path)) {
             return Response::error(404,'Invalidate data for download');
