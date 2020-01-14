@@ -40,7 +40,7 @@ final class DownloadController
         $format = $downloadData['format'] ?? null;
         $from = $downloadData['from'] ?? null;
         $to = $downloadData['to'] ?? null;
-        $path = $downloadData['path'] ?? '/media/eugene/STAR/video/from_react_script/';
+        $path = $downloadData['path'] ?? null;
         $concurrently = (int)$downloadData['concurrently'] ?? null;
 
         if (!($url && $format && $from && $to && $path)) {
